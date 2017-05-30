@@ -1,0 +1,82 @@
+<!-- Validation failure messages -->
+<% if @menu.errors.any? %>
+  <% @menu.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Menu</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_menu" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for course_id -->
+      <div class="form-group">
+        <label for="course_id" class="control-label">
+          Course
+        </label>
+
+        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @menu.course_id %>">
+      </div>
+
+      <!-- Label and input for soft_beverage -->
+      <div class="form-group">
+        <label for="soft_beverage" class="control-label">
+          Soft beverage
+        </label>
+
+        <input type="text" id="soft_beverage" name="soft_beverage" placeholder="Soft beverage" class="form-control" value="<%= @menu.soft_beverage %>">
+      </div>
+
+      <!-- Label and input for beer -->
+      <div class="form-group">
+        <label for="beer" class="control-label">
+          Beer
+        </label>
+
+        <input type="text" id="beer" name="beer" placeholder="Beer" class="form-control" value="<%= @menu.beer %>">
+      </div>
+
+      <!-- Label and input for mixed_drink -->
+      <div class="form-group">
+        <label for="mixed_drink" class="control-label">
+          Mixed drink
+        </label>
+
+        <input type="text" id="mixed_drink" name="mixed_drink" placeholder="Mixed drink" class="form-control" value="<%= @menu.mixed_drink %>">
+      </div>
+
+      <!-- Label and input for snack -->
+      <div class="form-group">
+        <label for="snack" class="control-label">
+          Snack
+        </label>
+
+        <input type="text" id="snack" name="snack" placeholder="Snack" class="form-control" value="<%= @menu.snack %>">
+      </div>
+
+      <!-- Label and input for sandwich -->
+      <div class="form-group">
+        <label for="sandwich" class="control-label">
+          Sandwich
+        </label>
+
+        <input type="text" id="sandwich" name="sandwich" placeholder="Sandwich" class="form-control" value="<%= @menu.sandwich %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Menu
+      </button>
+      or
+      <a href="/menus">Cancel</a>
+    </form>
+  </div>
+</div>

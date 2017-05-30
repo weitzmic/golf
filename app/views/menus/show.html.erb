@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h3>Menu #<%= @menu.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Course</dt>
+      <dd><%= @menu.course_id %></dd>
+
+      <dt>Soft beverage</dt>
+      <dd><%= @menu.soft_beverage %></dd>
+
+      <dt>Beer</dt>
+      <dd><%= @menu.beer %></dd>
+
+      <dt>Mixed drink</dt>
+      <dd><%= @menu.mixed_drink %></dd>
+
+      <dt>Snack</dt>
+      <dd><%= @menu.snack %></dd>
+
+      <dt>Sandwich</dt>
+      <dd><%= @menu.sandwich %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/menus" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/menus/<%= @menu.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_menu/<%= @menu.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

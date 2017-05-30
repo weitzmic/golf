@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Weather #<%= @weather.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Temperature</dt>
+      <dd><%= @weather.temperature %></dd>
+
+      <dt>Summary</dt>
+      <dd><%= @weather.summary %></dd>
+
+      <dt>Score</dt>
+      <dd><%= @weather.score_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/weathers" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/weathers/<%= @weather.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_weather/<%= @weather.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
