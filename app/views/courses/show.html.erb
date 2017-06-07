@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h3>Course #<%= @course.id %></h3>
+  <h3>Course <%= @course.course_name %></h3>
 </div>
 
 <div class="row">
@@ -15,7 +15,19 @@
       <dd><%= @course.course_address %></dd>
 
       <dt>Beverage Served</dt>
-  
+      <dd><%= @course.menu.soft_beverage %></dd>
+
+      <dt>Beer</dt>
+      <dd><%= @course.menu.beer %></dd>
+
+      <dt>Mixed Drink</dt>
+      <dd><%= @course.menu.mixed_drink %></dd>
+
+      <dt>Snack</dt>
+      <dd><%= @course.menu.snack %></dd>
+
+      <dt>Sandwich</dt>
+      <dd><%= @course.menu.sandwich %></dd>
 
     </dl>
 

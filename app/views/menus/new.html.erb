@@ -1,11 +1,11 @@
 <!-- Validation failure messages -->
 <% if @menu.errors.any? %>
-  <% @menu.errors.full_messages.each do |message| %>
-    <div class="alert alert-dismissable alert-danger">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <%= message %>
-    </div>
-  <% end %>
+<% @menu.errors.full_messages.each do |message| %>
+<div class="alert alert-dismissable alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <%= message %>
+</div>
+<% end %>
 <% end %>
 
 <div class="page-header">
@@ -24,7 +24,9 @@
           Course
         </label>
 
-        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @menu.course_id %>">
+        <!-- <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @menu.course_id %>"> -->
+
+        <%= select_tag(:course_id, options_from_collection_for_select(Course.all, :id, :course_name, @menu.course_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for soft_beverage -->

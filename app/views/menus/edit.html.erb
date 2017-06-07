@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Edit Menu #<%= @menu.id %></h3>
+  <h3>Edit Menu for <%= @menu.course.course_name %></h3>
 </div>
 
 <div class="row">
@@ -24,7 +24,9 @@
           Course
         </label>
 
-        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @menu.course_id %>">
+        <!-- <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @menu.course_id %>"> -->
+
+        <%= select_tag(:course_id, options_from_collection_for_select(Course.all, :id, :course_name, @menu.course_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for soft_beverage -->

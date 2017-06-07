@@ -1,12 +1,12 @@
 <div class="page-header">
-  <h3>Menu #<%= @menu.id %></h3>
+  <h3>Menu for <%= @menu.course.course_name %></h3>
 </div>
 
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Course</dt>
-      <dd><%= @menu.course_id %></dd>
+      <dd><%= @menu.course.course_name %></dd>
 
       <dt>Soft beverage</dt>
       <dd><%= @menu.soft_beverage %></dd>
