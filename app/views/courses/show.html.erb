@@ -29,22 +29,14 @@
       <dt>Sandwich</dt>
       <dd><%= @course.menu.sandwich %></dd>
 
-      <dl>
-        <dt>Current Temperature</dt>
-        <dd><%= @current_temperature %></dd>
+      <form action="/street_to_weather">
+        <div>
 
-        <dt>Current Summary</dt>
-        <dd><%= @current_summary %></dd>
+          <input type="hidden" name="user_street_address" id="the_address" value="<%= @course.course_address %>">
+        </div>
 
-        <dt>Outlook for next sixty minutes</dt>
-        <dd><%= @summary_of_next_sixty_minutes %></dd>
-
-        <dt>Outlook for next several hours</dt>
-        <dd><%= @summary_of_next_several_hours %></dd>
-
-        <dt>Outlook for next several days</dt>
-        <dd><%= @summary_of_next_several_days %></dd>
-      </dl>
+        <button>Tell me the weather!</button>
+      </form>
 
     </dl>
 
