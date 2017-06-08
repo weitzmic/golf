@@ -4,6 +4,7 @@
     <a href="/courses/new" class="btn btn-lg btn-success">Add Course <i class="fa fa-plus" aria-hidden="true"></i></a>
   </h1>
 </div>
+<% @courses.each do |course| %>
 
 <div class="row">
   <div class="col-md-12">
@@ -15,7 +16,7 @@
         <th>Actions</th>
       </tr>
 
-      <% @courses.each do |course| %>
+
       <tr>
         <td><%= course.course_name %></td>
         <td><%= course.course_year_started %></td>
