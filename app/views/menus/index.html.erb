@@ -1,7 +1,7 @@
 <div class="page-header">
   <h1>
     Menus
-    <a href="/menus/new" class="btn btn-lg btn-success">New Menu</a>
+    <a href="/menus/new" class="btn btn-lg btn-success">Add Menu <i class="fa fa-plus" aria-hidden="true"></i></a>
   </h1>
 </div>
 
@@ -28,8 +28,8 @@
         <td><%= menu.sandwich %></td>
         <td>
           <a href="/menus/<%= menu.id %>" class="btn btn-primary">Show</a>
-          <a href="/menus/<%= menu.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_menu/<%= menu.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <a href="/menus/<%= menu.id %>/edit" class="btn btn-warning">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          <a href="/delete_menu/<%= menu.id %>" class="btn btn-danger" rel="nofollow">Delete <i class="fa fa-trash" aria-hidden="true"></i></a>
         </td>
       </tr>
       <% end %>
