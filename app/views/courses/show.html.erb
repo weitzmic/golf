@@ -40,13 +40,10 @@
       <div class="row">
         <h3>Weather</h3>
       </div>
+
       <form action="/street_to_weather">
-        <div>
-
-          <input type="hidden" name="user_street_address" id="the_address" value="<%= @course.course_address %>">
-        </div>
-
-        <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-sun-o" aria-hidden="true"></i> Tell me the weather! <i class="fa fa-cloud" aria-hidden="true"></i></button>
+        <input type="hidden" name="course_address" id="course_address" value="<%= @course.course_address %>">
+        <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-sun-o"></i> Tell me the weather! <i class="fa fa-cloud"></i></button>
       </form>
 
       <div class="row">
