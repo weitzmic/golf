@@ -7,7 +7,7 @@ class MeteorologistController < ApplicationController
   end
 
   def street_to_weather
-    @street_address = params[:user_street_address]
+    @street_address = params[:course_address]
 
     # ==========================================================================
     # Your code goes below.
