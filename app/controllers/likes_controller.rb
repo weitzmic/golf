@@ -21,7 +21,7 @@ class LikesController < ApplicationController
     @like = Like.new
 
     @like.user_id = params[:user_id]
-    @like.photo_id = params[:photo_id]
+    @like.course_id = params[:course_id]
 
     save_status = @like.save
 
@@ -42,7 +42,7 @@ class LikesController < ApplicationController
     @like = Like.find(params[:id])
 
     @like.user_id = params[:user_id]
-    @like.photo_id = params[:photo_id]
+    @like.course_id = params[:course_id]
 
     save_status = @like.save
 
