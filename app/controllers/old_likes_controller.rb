@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   def index
-    @likes = Like.all
+    @likes = current_user.likes
 
     render("likes/index.html.erb")
   end
@@ -26,7 +26,7 @@ class LikesController < ApplicationController
     save_status = @like.save
 
     if save_status == true
-      redirect_to("/likes/#{@like.id}", :notice => "Like created successfully.")
+      redirect_to("/my_like/#{@like.id}", :notice => "Like created successfully.")
     else
       render("likes/new.html.erb")
     end
@@ -47,7 +47,7 @@ class LikesController < ApplicationController
     save_status = @like.save
 
     if save_status == true
-      redirect_to("/likes/#{@like.id}", :notice => "Like updated successfully.")
+      redirect_to("/my_like/#{@like.id}", :notice => "Like updated successfully.")
     else
       render("likes/edit.html.erb")
     end
@@ -58,7 +58,7 @@ class LikesController < ApplicationController
 
     @like.destroy
 
-    if URI(request.referer).path == "/likes/#{@like.id}"
+    if URI(request.referer).path == "/my_like/#{@like.id}"
       redirect_to("/", :notice => "Like deleted.")
     else
       redirect_to(:back, :notice => "Like deleted.")

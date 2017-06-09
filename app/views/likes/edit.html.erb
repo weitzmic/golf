@@ -14,7 +14,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/update_my_like/<%= @like.id %>" method="post">
+    <form action="/update_like/<%= @like.id %>" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -27,7 +27,7 @@
         <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @like.user_id %>">
       </div>
 
-      <!-- Label and input for photo_id -->
+      <!-- Label and input for course_id -->
       <div class="form-group">
         <label for="course_id" class="control-label">
           Course
@@ -40,7 +40,7 @@
         Update Like
       </button>
       or
-      <a href="/my_like/<%= @like.id %>">Cancel</a>
+      <a href="/likes/<%= @like.id %>">Cancel</a>
     </form>
   </div>
 </div>
