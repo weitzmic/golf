@@ -12,7 +12,10 @@
   body {
     padding-top: 60px;
   }
-
+  .myNavbar   {
+      background: blue;
+      color: green;
+}
 
   </style>
 
@@ -57,8 +60,8 @@
 
           <% if current_user != nil %>
 
-          <li><a type="button" class="btn btn-default navbar-btn" style="padding: 10px" href="/users/edit">Edit <%= current_user.email %></a></li>
-          <li><a href="/users/sign_out" data-method="delete" rel="nofollow" style="padding: 10px" type="button" class="btn btn-default navbar-btn">Sign Out</a></li>
+          <li><a class="nav navbar-nav navbar-right" style="padding: 10px" href="/users/edit">Edit <%= current_user.email %></a></li>
+          <li><a href="/users/sign_out" data-method="delete" rel="nofollow" style="padding: 10px" class="nav navbar-nav navbar-right">Sign Out</a></li>
 
           <% else %>
           <li><a href="/users/sign_up">Sign Up</a></li>

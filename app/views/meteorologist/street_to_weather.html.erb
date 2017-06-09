@@ -1,22 +1,44 @@
 <h3>Here's the outlook for <%= @street_address %>:</h3>
 
-<dl>
-  <dt>Current Temperature</dt>
-  <dd><%= @current_temperature %></dd>
+<div class="row">
+  <h3>
+    <dt>Current Temperature</dt>
+  </h3>
+</div>
+<dd><%= @current_temperature %></dd>
 
-  <dt>Current Summary</dt>
-  <dd><%= @current_summary %></dd>
+<div class="row">
+  <h3>
+    <dt>Current Summary</dt>
+  </h3>
+</div>
+<dd><%= @current_summary %></dd>
 
-  <dt>Outlook for next sixty minutes</dt>
-  <dd><%= @summary_of_next_sixty_minutes %></dd>
 
-  <dt>Outlook for next several hours</dt>
-  <dd><%= @summary_of_next_several_hours %></dd>
+<div class="row">
+  <h3>
+    <dt>Outlook for next sixty minutes</dt>
+  </h3>
+</div>
+<dd><%= @summary_of_next_sixty_minutes %></dd>
 
-  <dt>Outlook for next several days</dt>
-  <dd><%= @summary_of_next_several_days %></dd>
-</dl>
 
+<div class="row">
+  <h3>
+    <dt>Outlook for next several hours</dt>
+  </h3>
+</div>
+<dd><%= @summary_of_next_several_hours %></dd>
+
+
+<div class="row">
+  <h3>
+    <dt>Outlook for next several days</dt>
+  </h3>
+</div>
+<dd><%= @summary_of_next_several_days %></dd>
+
+<p><p>
 <div class="btn-group btn-group-justified">
   <a href="/courses/" class="btn btn-primary">
     Back

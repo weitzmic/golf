@@ -21,9 +21,6 @@
       </div>
 
       <% if @course.menu != nil %>
-      No Menu Yet!
-
-      <% else %>
       <dt>Beverage Served</dt>
       <dd><%= @course.menu.soft_beverage %></dd>
 
@@ -38,6 +35,10 @@
 
       <dt>Sandwich</dt>
       <dd><%= @course.menu.sandwich %></dd>
+
+      <% else %>
+        No Menu Yet!
+
       <% end %>
 
       <div class="row">
