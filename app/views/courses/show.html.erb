@@ -63,7 +63,7 @@
   <li class="media">
     <div class="media-body">
       <h6 class="media-heading">
-        <a href="/users/<%= comment.user_id %>"><%= comment.user.username %></a>
+        <a href="/users/<%= comment.user_id %>"><%= comment.user.email %></a>
         <small><%= time_ago_in_words(comment.created_at)%> ago</small>
       </h6>
       <%= comment.body %>
@@ -72,35 +72,7 @@
 </ul>
 <% end %>
 
-<li class="media">
-  <div class="media-body">
-    <form action="/quick_create_comment" method="post">
-      <!-- Hidden input for authenticity token to protect from forgery -->
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      <input type="hidden" name="course_id" value="<%=course.id%>">
-
-      <input type="hidden" name="user_id" value="<%=current_user.id%>">
-
-      <!-- Label and input for body -->
-      <div class="form-group">
-        <label for="body" class="sr-only">
-          Body
-        </label>
-
-        <div class="input-group">
-          <input type="text" id="body" name="body" class="form-control" placeholder="Add a comment..." required>
-
-          <span class="input-group-btn">
-            <button class="btn btn-link">
-              <i class="fa fa-commenting-o"></i>
-            </button>
-          </span>
-        </div><!-- /input-group -->
-      </div>
-    </form>
-  </div>
-</li>
 
   </dl>
 
