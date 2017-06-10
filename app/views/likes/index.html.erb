@@ -9,7 +9,7 @@
     <table class="table table-striped table-hover">
       <tr>
         <th>Course</th>
-        <th>Comments</th>
+        <th>Notes</th>
         <th>Actions</th>
       </tr>
 
@@ -18,10 +18,10 @@
       <tr>
         <td><%= like.course.course_name %></td>
         <td>
-        <% like.course.comments.each do |comment| %>
-<%= comment.body %>
-      <% end %>
-    </td>
+          <% like.course.comments.each do |comment| %>
+          <%= comment.body %>
+          <% end %>
+        </td>
 
         <td><a href="/courses/<%= like.course.id %>" class="btn btn-primary">Show</a></td>
         <td><a href="/delete_like/<%= like.id %>" class="btn btn-danger" rel="nofollow">Delete</a></td>
