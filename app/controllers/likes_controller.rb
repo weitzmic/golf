@@ -26,7 +26,7 @@ class LikesController < ApplicationController
     save_status = @like.save
 
     if save_status == true
-      redirect_to("/courses", :notice => "Course saved successfully.")
+      redirect_to("/courses", :notice => "Course added to 'My Courses'.")
     else
       render("likes/new.html.erb")
     end
